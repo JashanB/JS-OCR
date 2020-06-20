@@ -13,3 +13,10 @@ const storage = multer.diskStorage({
     cb(null, req.file);
   }
 });
+
+const upload = multer({storage}).single('avatar');
+app.set('view engine', "ejs");
+
+app.get('/upload', (req, res) => {
+
+})
